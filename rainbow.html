@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>document</title>
+</head>
+<style>
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+  }
+button{
+  color:black;
+  border:5px solid black;
+  background-color: blueviolet;
+  padding: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+
+}
+</style>
+<body>
+  <button>Click Here!</button>
+  <script>
+    const btn=document.querySelector("button");
+    const body=document.querySelector("body");
+    const color=['silver','Indigo','blue','green','yellow','pink','black']
+    body.style.backgroundColor="skyblue";
+    document.addEventListener('click',function()
+    {
+    const colorIndex=parseInt(Math.random()*color.length)
+      body.style.backgroundColor=color[colorIndex];
+    });
+  </script>
+</body>
+</html>
